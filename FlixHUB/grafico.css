@@ -1,0 +1,29 @@
+.grafico {
+  background-color: #080516;
+}
+
+h1 {
+  padding: 5%;
+  text-align: center;
+  color: white;
+  font-size: 250%;
+}
+
+.button-grafico {
+  margin: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: orange;
+  color: rgb(12, 59, 97);
+  border: none;
+  cursor: pointer;
+}
+
+.chart-container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}

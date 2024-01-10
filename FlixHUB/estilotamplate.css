@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+@font-face {
+    font-family: 'infec';
+    src: url(fonts/LEMONMILK-Bold.otf) format(truetype);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'infec';
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(13, 77, 112, 0.7);
+}
+
+.scroll-to-top {
+    position: fixed;
+    display: block;
+    top: 80px;
+    right: 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: visibility 0s, opacity 0.5s;
+    z-index: 999;
+}
+
+.glass-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(13, 77, 112, 0.7);
+    padding: 10px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.glass-link {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.glass-link:hover {
+    color: orange;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    color: rgb(13, 77, 112);
+    overflow: hidden;
+}
+
+.headertxt1 {
+    font-size: 160px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 22%;
+    color: rgb(13, 77, 112);
+}
+
+.headertxt2 {
+    margin-left: -10%; /* Adjust this value as needed */
+    font-size: 160px;
+    padding-top: 100px;
+    text-align: center;
+    color: orange;
+    display: inline-block;
+}
+
+.txt1 {
+    margin-left: 32%;
+    
+    font-size: 35px;
+    background: linear-gradient(90deg, orange 22%, rgb(13, 77, 112) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container {
+    position: relative;
+    height: 200px;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 1;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 10%;
+}
+
+.who {
+    text-align: left;
+    padding-left: 4%;
+    padding-top: 2%;
+    background: linear-gradient(0deg, rgb(13, 77, 112), #080516 12%);
+    padding-bottom: 1%;
+}
+
+.container-frente {
+    position: relative;
+    max-width: 1094px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(255, 166, 0, 0.748);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+    color: rgb(12, 62, 89);
+}
+
+.h1-frente {
+    color: rgb(232, 232, 232)
+}
+
+.container-fundo {
+    position: relative;
+    overflow: hidden;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background: linear-gradient(180deg, orange 0%, rgb(13, 77, 112) 0%);
+}
+
+.container-frente h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.button-filme {
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: rgb(12, 65, 106);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+}
+
+.button-filme:hover {
+    background-color: rgb(9, 46, 75);
+}
+
+.cheetos-top-fundo {
+    position: absolute;
+    width: 6%;
+    height: 6%;
+    background-image: url('imagens/cheetos-deitado.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: cheetosAnimation-top-fundo 8.0s infinite;
+    z-index: 0;
+}
+
+.cheetos-fundo {
+    position: absolute;
+    width: 6%;
+    height: 6%;
+    background-image: url('imagens/cheetos-branco.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: cheetosAnimation-fundo 7.6s infinite;
+    z-index: 0;
+}
+
+.cheetos-bottom-fundo {
+    position: absolute;
+    width: 6%;
+    height: 6%;
+    background-image: url('imagens/cheetos-deitado.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: cheetosAnimation-bottom-fundo 8.0s infinite;
+    z-index: 0;
+}
+
+@keyframes cheetosAnimation-top-fundo {
+    0% {
+        transform: translate(-120px, 20px);
+    }
+
+    100% {
+        transform: translate(1800px, 20px);
+    }
+}
+
+@keyframes cheetosAnimation-fundo {
+    0% {
+        transform: translate(-120px, 220px);
+    }
+
+    100% {
+        transform: translate(1800px, 220px);
+    }
+}
+
+@keyframes cheetosAnimation-bottom-fundo {
+    0% {
+        transform: translate(-120px, 430px);
+    }
+
+    100% {
+        transform: translate(1800px, 430px);
+    }
+}
+
+.conteudo {
+    background: linear-gradient(180deg, rgb(13, 77, 112), #080516 6%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.cont1 {
+    margin-top: 7%;
+    text-align: center;
+    font-size: 110px;
+    position: relative;
+    color: orange;
+}
+
+.cont2 {
+    text-align: center;
+    padding-top: 2%;
+    color: white;
+    margin-bottom: 10%;
+    font-size: 30px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.imagem-btn {
+    max-width: 100%;
+    max-height: 100%;
+    width: 500px;
+    height: 600px;
+    border: none;
+    background: none;
+    padding: 0;
+    outline: 2px solid transparent;
+    cursor: pointer;
+}
+
+.melhores,
+.umsonho,
+.lancamentos,
+.breve,
+.piores {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8%;
+}
+
+.melhores img,
+.umsonho img,
+.lancamentos img,
+.breve img,
+.piores img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.cheetos-top-conteudo {
+    position: absolute;
+    width: 7%;
+    height: 7%;
+    background-image: url('imagens/cheetosazul.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: cheetosAnimationTop-conteudo 6s infinite;
+    z-index: 0;
+}
+
+.cheetos-conteudo {
+    position: absolute;
+    width: 7%;
+    height: 7%;
+    background-image: url('imagens/cheetos.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: cheetosAnimation-conteudo 6s infinite;
+    z-index: 0;
+}
+
+.cheetos-bottom-conteudo {
+    position: absolute;
+    width: 7%;
+    height: 7%;
+    background-image: url('imagens/cheetosazul.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: cheetosAnimationBottom-conteudo 6s infinite;
+    z-index: 0;
+}
+
+@keyframes cheetosAnimationTop-conteudo {
+    0% {
+        transform: translate(600px, -150px);
+    }
+
+    100% {
+        transform: translate(1580px, 1300px);
+    }
+}
+
+@keyframes cheetosAnimation-conteudo {
+    0% {
+        transform: translate(-150px, 0px);
+    }
+
+    100% {
+        transform: translate(1570px, 2130px);
+    }
+}
+
+@keyframes cheetosAnimationBottom-conteudo {
+    0% {
+        transform: translate(-150px, 600px);
+    }
+
+    100% {
+        transform: translate(730px, 2100px);
+    }
+}
+
+.melhores span,
+.lancamentos span,
+.breve span,
+.piores span {
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-size: 200%;
+}
+
+.opcoes-filme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.opcao-filme {
+    margin-right: 10px;
+}
+
+.sonho-filme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sonho-filme img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.carousel {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-btn:focus .carousel-container {
+    transform: translateX(-100%);
+}
+
+.col-100 {
+    padding-top: 1%;
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.col-4 {
+    float: left;
+    text-align: center;
+    width: 33.3%;
+    padding: 4%;
+    color: #9a9a9a;
+}
+
+.col-4-h {
+    color: white;
+    margin-bottom: 5%;
+}
+
+.footer h3 {
+    text-align: left;
+}
+
+.footer {
+    background-image: url('imagens/footer.png');
+    color: orange;
+    width: 100%;
+}
+
+.footer p {
+    width: 100%;
+    text-align: left;
+}
+
+.footer-2 {
+    background-image: url('imagens/footer2.png');
+    height: 112px;
+}
+
+.footer-2 p {
+    padding-top: 0.4%;
+    text-align: center;
+    color: #9a9a9a;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content {
+    position: relative;
+}
+
+.clock:before {
+    content: '';
+    width: 20px;
+    height: 14px;
+    display: inline-block;
+    background-image: url('imagens/clock.png');
+    float: left;
+    background-repeat: no-repeat;
+    padding-left: 5px;
+}
+
+.local:before,
+.emailico:before,
+.telefoneico:before {
+    content: '';
+    width: 20px;
+    height: 14px;
+    display: inline-block;
+    float: center;
+    background-repeat: no-repeat;
+    padding-left: 5px;
+}
+
+.local:before {
+    background-image: url('imagens/local.png');
+}
+
+.emailico:before {
+    background-image: url('imagens/email.png');
+}
+
+.telefoneico:before {
+    background-image: url('imagens/telefoneico.png');
+}
+
+.texto-secundario {
+    text-align: center;
+}
+
+.texto-secundario strong {
+    color: #646464;
+}
+
+.texto-secundario h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #818181;
+}
+
+.texto-secundario p {
+    font-size: 15px;
+    color: #9a9a9a;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: blue rgb(255, 255, 255);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 11px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(30, 30, 113);
+    border-radius: 40px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.img {
+    position: absolute;
+    right: 4%;
+    top: 105%;
+    width: 750px;
+    height: 750px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background-color: var(--main-color);
+    color: var(--light-one);
+    border-radius: 2rem;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.links ul {
+    display: flex;
+}
+
+.links {
+    display: inline-block;
+    padding: 0.9rem 1.2rem;
+    color: var(--dark-one);
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+    transition: 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.links {
+    background-color: var(--main-color);
+    color: var(--light-one);
+    border-radius: 2rem;
+    font-size: 1rem;
+    padding: 0.9rem 2.1rem;
+    margin-left: 1rem;
+}
+
+.links {
+    color: var(--main-color);
+}
+
+.links {
+    color: var(--light-one);
+    background-color: #6c43ff;
+    border-radius: 30px;
+    text-decoration: none
+}
+
+.active {
+    text-decoration: none;
+    color: inherit;
+    color: #ffffff;
+    padding: 0rem;
+}
+
+.coluna {
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 0.8;
+    color: var(--light-one);
+    font-style: times;
+    color: #454345;
+    font-weight: 800;
+    padding: 4rem;
+}
+
+.text {
+    font-style: helvetica;
+    text-align: left;
+    color: #747074;
+    font-size: 1.7rem;
+    font-weight: 600;
+    width: 940px;
+    padding: 1rem;
+}
+
+.header-title {
+    text-align: left;
+}
